@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-rest-deployment
+  name: spring-rest
   labels:
-    app: spring-rest-deployment
+    app: spring-rest
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-rest-app
+      app: spring-rest
   template:
     metadata:
       labels:
-        app: spring-rest-app
+        app: spring-rest
     spec:
       containers:
         - name: app
