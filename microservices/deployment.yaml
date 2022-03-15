@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-microservices
+  labels:
+    app: spring-microservices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-microservices
+  template:
+    metadata:
+      labels:
+        app: spring-microservices
+    spec:
+      containers:
+        - name: gateway
+          image: laminba2003/spring-gateway:1.0
+        - name: country-service
+          image: laminba2003/spring-rest:1.3
+          env:
+           - name: WHOAMI_MODE
+             value: Testing
