@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spring-training
+data: 
+  spring.cloud.kubernetes.enabled: "false"
+  management.metrics.export.wavefront.uri: https://wavefront.surf

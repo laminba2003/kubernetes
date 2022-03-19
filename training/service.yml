@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  spring-training-service
+spec:
+  selector:
+    app:  spring-training-app
+  type:  LoadBalancer
+  ports:
+  - name:  http
+    port:  9090
+    targetPort:  9090

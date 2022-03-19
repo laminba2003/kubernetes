@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-training-deployment
+  labels:
+    deployment: spring-training-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: spring-training-app
+  template:
+    metadata:
+      labels:
+        app: spring-training-app
+    spec:
+      containers:
+      - name: spring-training
+        image: laminba2003/spring-rest:0.0.1-SNAPSHOT
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9090
+        envFrom:
+        - configMapRef:
+            name: spring-training
+        - secretRef:
+            name: spring-training
