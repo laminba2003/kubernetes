@@ -8,5 +8,5 @@ spec:
   type:  LoadBalancer
   ports:
   - name:  http
-    port:  9090
+    port:  9091
     targetPort:  9090

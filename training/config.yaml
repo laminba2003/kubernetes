@@ -5,3 +5,8 @@ metadata:
 data: 
   spring.cloud.kubernetes.enabled: "false"
   management.metrics.export.wavefront.uri: https://wavefront.surf
+  spring.datasource.url: jdbc:mysql://mysql:3306/spring_training?enabledTLSProtocols=TLSv1.2
+  spring.datasource.driver-class-name: com.mysql.cj.jdbc.Driver
+  spring.jpa.database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  spring.jpa.hibernate.ddl-auto: update
+  spring.datasource.initialization-mode: always
