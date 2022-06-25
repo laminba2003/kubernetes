@@ -1,6 +1,6 @@
 # ELK Installation with Helm
 
-## Create fluentd configMap
+## Create Fluentd ConfigMap
 
 ```bash
 $ kubectl apply -f fluentd-config.yaml
@@ -12,7 +12,7 @@ $ kubectl apply -f fluentd-config.yaml
 $ helm install elasticsearch bitnami/elasticsearch
 ```
 
-## Install fluentd
+## Install Fluentd
 
 ```bash
 $ helm install fluentd --set aggregator.configMap=fluentd-elasticsearch bitnami/fluentd
