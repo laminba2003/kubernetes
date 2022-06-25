@@ -1,4 +1,4 @@
-# ELK Installation with Helm
+# Helm Installation
 
 ## Create Fluentd ConfigMap
 
