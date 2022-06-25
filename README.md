@@ -1,1 +1,1 @@
-Spring Kubernetes
+Kubernetes
