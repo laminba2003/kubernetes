@@ -3,7 +3,7 @@
 ## Create Fluentd ConfigMap
 
 ```bash
-$ kubectl apply -f fluentd-config.yaml
+$ kubectl apply -f elk/fluentd-config.yaml
 ```
 
 ## Install Elasticsearch
