@@ -98,3 +98,18 @@ To get the admin credentials execute the following commands:
 echo "User: admin"
 echo "Password: $(kubectl get secret grafana-admin --namespace default -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 -d)"
 ```
+
+## Install Keycloak
+
+```bash
+$ helm install keycloak bitnami/keycloak
+```
+
+Keycloak can be accessed within the cluster on port 8080 at keycloak.default.svc.cluster.local
+
+To access from outside the cluster execute the following commands:
+
+```bash
+kubectl port-forward --namespace default svc/keycloak 8080:8080
+curl http://127.0.0.1:8080/
+```
